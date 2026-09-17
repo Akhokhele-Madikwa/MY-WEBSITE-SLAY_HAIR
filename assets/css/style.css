@@ -1,0 +1,31 @@
+/* Basic Reset*/
+*{
+    margin :0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: medium;
+}
+/*Decoration*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px  25px;
+    background-color: rgb(218, 43, 136);
+}
+main{
+    background-color: rgb(235, 207, 226);
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline overline;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    text-shadow:
+    0 0 5px hotpink;
+
+}
+    
