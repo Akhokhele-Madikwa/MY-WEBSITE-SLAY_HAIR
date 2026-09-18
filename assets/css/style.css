@@ -176,7 +176,7 @@ nav a:focus-visible{
     color:#c94f79;
 }
 
-/* Services */
+/* Services we provide */
 .service-grid{
   display: grid;  
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
