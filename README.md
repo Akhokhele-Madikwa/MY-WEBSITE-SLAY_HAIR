@@ -24,6 +24,15 @@ style.css
 - added color to each page (about, contact, enquiry, services)
 - edited navigation links 
 - updated font sizes, ect. 
+## Reference 
+Reference list 
+https://successindepth.com/smart-goals-for-beauty-salon/  [updated 5 June 2024]
+Peter Ciardulli, May 14 
+https://www.salonsmart.com/post/salon-kpis-and-benchmarks
+Aigars Silkalnsc
+https://colorlib.com/wp/hair-salon-websites-design/    [Accessed 20 March 2026]
+https://codelucky.com/web-hosting-requirement   [Accessed 29 August 2025]
+https://www.jwd.co.za/website-technical-guide/  [updated 16 July 2025]
 
  
 
