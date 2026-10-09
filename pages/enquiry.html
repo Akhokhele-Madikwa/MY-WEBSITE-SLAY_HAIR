@@ -36,24 +36,45 @@
     </main>
 
      <!--SLAY_HAIRBEAUTY enquiry form section-->  
-    </section>
+    <section>
                <h1>Enquiry Form</h1> 
                <!--Create a form-->
-               <form action="#" method="post">
-                <label for="name"name="name">NAME:</label><br/>
+               <form id action="enquiryForm" method="post"  novalidate>
+                <label for="name">NAME:</label><br/>
                 <input type="text" id="name" placeholder="Tell us who you are" required>
+                <div class ="error" id="err-name" style ="color:red"></div>
                 <br/><br/>
                 <label for="email"name="email">Email Address</label><br/>
                 <input type="email" name="email" placeholder="Where can we reply to you " required>
+                <div class ="error" id="err-name" style ="color:red"></div>
                 <br/><br/>
+                <label for ="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 0670210646">
+                <div class ="error" id="err-name" style ="color:red"></div>
                 <label for="How can we help you?" name="How can we help you?">Message:</label><br/>
-                <textarea name="How can we help you?"rows="10" cols="40" placeholder="Tell us what you want us to improve in our services">
+                <label for ="service">What are you enquiring about?</label>
+                <select id="service" name="service">
+                    <option value ="">--Select an option --</option>
+                    <option value ="Installations|300"> Installations</option>
+                    <option value ="Wig wash & Care|180"> Wig wash & Care </option>
 
-                </textarea>
+
+                </select>
+                <div class ="error" id="err-services" style="color: red"></div><br/>
+
+                <label for ="date" >Preferred date: </label><br/>
+                <input type ="date" id=" date " name="date">
+                <div class ="error" id="err-service" style="color: red" ></div><br/>
+
+                <label for ="details ">Message :</label><br/>
+                <textarea name="How can we help you?"rows="10" cols="40" placeholder="Tell us what you want us to improve in our services"> </textarea>
+                 <div class ="error" id="err-services" style="color: red"></div><br/>
+
                 <br/><br/>
                 <button type="submit"></button>
                 
               </form>
+              <
            
         </section>
     
