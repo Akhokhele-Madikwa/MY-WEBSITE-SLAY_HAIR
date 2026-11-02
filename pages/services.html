@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
      <link rel="stylesheet" href="../assets/css/style.css"> 
+     
     <title>SLAY_HAIRBEAUTY |SERVICES</title>
+     <meta name="descriptipn" content=" Shop jerry curls , straight and water wave wigs from R1500, with wig installation from R300 and wig wash and care from R180.> ">
+    <meta name="keywords" content="wig sales, jerry curl wigs , straight wigs, water wave wigs, wig installation, wig wash and care, wig prices">
+    <meta name="author" content=" Akhokhele Madikwa">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c1285b">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SLAY_HAIRBEAUTY">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title " content="SLAY_HAIRBEAUTY  | Quality Wigs for Women">
+    <meta property="og:descriptipn" content="SLAY_HAIRBEAUTY Shop jerry curls , straight and water wave wigs from R1500, with wig installation from R300 and wig wash and care from R180.> ">
 </head>
 <body>
     <!--Header Section-->
@@ -38,15 +49,21 @@
 
         <!--Services Section-->
         <section>
+
+            <div data-tabs>
+                <div class="tab-panel" id="wig-sales" data-tab-title= "Wig Sales" ></div>
+            </div>
             <!--Wig Sales-->
             <h1> Wig Sales</h1>
             <p>We sell a variety of high quality wigs in different styles, lengths and colours.
                  Our wigs are suitablefor everyday wear and special occasions.
             </p>
             <h1>Wigs Available</h1>
-            <img src="../assets/images/rn-image_picker_lib_temp_5dd602f9-cd51-4f68-a1a9-ebb459219515.webp" >
-            <img src="../assets/images/71Dmk317zeL.jpg">
-            <img src="../assets/images/81Ng1XAYLlL._SL1300_.jpg" >
+            <ul class="gallery">
+                <li><a href="../assets/images/rn-image_picker_lib_temp_5dd602f9-cd51-4f68-a1a9-ebb459219515.webp" data-caption="Jerry curl wig"><img loading ="lazy" src="../assets/images/rn-image_picker_lib_temp_5dd602f9-cd51-4f68-a1a9-ebb459219515.webp" alt="Black Jerry curl wig for women sold by SLAY_HAIRBEAUTY"></li>/a></li>
+                <li><a href="../assets/images/71Dmk317zeL.jpg" data-caption="Straight wig"><img loading="lazy" src="../assets/images/71Dmk317zeL.jpg" alt="Long straight wig for women sold by SLAY_HAIRBEAUTY"></a></li>
+                <li><a href="../assets/images/81Ng1XAYLlL._SL1300_.jpg"data-caption= "Water wave curl wig" ><img loading = "lazy" src="../assets/images/81Ng1XAYLlL._SL1300_.jpg" alt="Water wave curl wig for women sold by SLAY_HAIRBEAUTY"></a></li>
+            
             
             <ul>
                 <li>Jerry Curls Wigs</li>
@@ -88,6 +105,53 @@
 
             </ul>
             <p> Price : From R180</p>
+            <p><a href="enquiry.html?service=Wig%20wash%20%26%20Care" Book a wig wash </a></p>
+            </div>
+        </div>
+        </section>
 
+        <section id ="catalogue" >
+            <h2>Price list: search,filter and sort</h2>
+            <form id="catForm " class="catalogue-controls" role="search" action="#" method="get" >
+             <div>
+                <label for="catCategory">Category</label>
+                <select id="catCategory" >
+                    <option value="">All</option>
+                    <option value="Wigs">Wigs</option>
+                    <option value="Services">Service</option>
+                </select>
+             </div>  
+             <div>
+                <label for="catSort">Sort by</label>
+                <select id="catSort">
+                    <option value="name-asc">Name (A to Z)</option>
+                    <option value="price-asc">Price (low to high) </option>
+                    <option value="price-desc">Price (high to low) </option>
+
+                </select>
+
+             </div> 
+             <button type ="button" id="catReset" hidden>Clear filters</button>
+
+            </form>
+            <p id="catCount" aria-live="polite"></p>
+            <ul id="catList"  class="product-list" ></ul>
+            <noscript><p>Turn on JavaScript on search the price list. Wigs start from R1500 , wig installation from R300 and wig wash and care from R180.</p>/noscript>
+
+
+            
         </section>
     </main>
+
+       <footer>
+        <nav aria-label = "Footer" >
+            <a href="index.html">HOME</a>
+            <a href="pages/about.html">ABOUT US</a>
+            <a href="pages/contact.html">CONTACT US</a>
+            <a href="pages/enquiry.html">ENQUIRY</a>
+            <a href="pages/services.html">SERVICES</a>
+        </nav>
+        <p class ="share-links">Share this page: <span id ="shareLinks"></span></p>
+        <p>&copy; <span id="year"></span> SLAY_HAIRBEAUTY | 18A CathCart Street, Aliwal North,9750</p>
+
+    </footer>
