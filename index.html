@@ -4,7 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css"> 
+    <!--Part3-->
+    <link rel ="stylesheet" href="assets/css/style.css">
+    <meta http-equiv="content-securtity-policy" content="default"
+    <meta name="referrer"   content="strict-orgin-when-cross-origin">
+  
     <title>SLAY_HAIRBEAUTY |HOME</title>
+    <meta name="descriptipn" content="SLAY_HAIRBEAUTY sells high-quality , affordable wigs for women in Aliwal North, with professional wig installations and wig wash & care">
+    <meta name="keywords" content="wigs,afforable wigs , wig installation and care.">
+    <meta name="author" content=" Akhokhele Madikwa">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c1285b">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SLAY_HAIRBEAUTY">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title " content="SLAY_HAIRBEAUTY  | Quality Wigs for Women">
+    <meta property="og:descriptipn" content="SLAY_HAIRBEAUTY high-quality , affordable wigs for women in Aliwal North, with professional wig installations and wig wash & care">
+    <!--Added structured data so search -->
+    <script type="application/id+json">
+
+        {
+            "@context": :https://schema.org",
+            "@type": "HairSalon",
+            "name": "SLAY_HAIRBEAUTY",
+            "descriptipn": "high-quality , affordable wigs for women in Aliwal North, with professional wig installations and wig wash & care",
+            "telephone":"+27670210646",
+            "email": "info@slay_hairbeauty.com",
+            "areaServed": "Aliwal North, Eastern Cape , South Africa" ,
+            "address" : {
+                "@type" : "PostalAddress",
+                "stressAddress": "18A CathCart Street",
+                "addressLocality": "Aliwal North",
+                "postalCode":"9750",
+                "addressCountry":"ZA",
+            },
+            "geo" :{"@type": "GeoCoordinates" , "latitude":-30.68807, "longitude":26.71039},
+            "openingHoursSpecification" : [
+                {"@type": "openingHoursSpecification" , "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday" , "Friday"] , "opens": "09:00" , "closes": "18:00"},
+                {"@type": "openingHoursSpecification" , "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00" , "closes": "15:00"}  ]
+        }
+    </script>
 </head>
 <body>
     <!--Header Section-->
@@ -29,6 +68,10 @@
         <section>
             <!--Welcome message-->
             <h1> WELCOME TO SLAY_HAIRBEAUTY</h1>
+            <!--Added greetings -->
+            <p id="greeting" aria-live="polite"></p>
+            <p id="openStatus" aria-live="polite"></p>
+
 
             <!--Website descriptipn -->
             <p >
@@ -41,7 +84,36 @@
             <img src="./assets/images/9b5e2d24-b904-4c0d-b2f1-1a92198694dc.png" >
              
         </section>
+
+        <!--Links to other oages-->
+        <section>
+            <h2> What we offer</h2>
+            <ul>
+                <li><a href="pages/services.html#wig-sales">Wigs for every style </a></li>
+                <li><a href="pages/services.html#wig-installions">wig installation</a>: a secure and natural look</li>
+                <li><a href="pages/services.html#wig-wash"> wig wash and care</a> : keep your wig clean and fresh  </li>
+            </ul>
+            <p> Ready to slay?  <a href="pages/enquiry.html">Send us an enquiry</a>,
+                read <a href="pages/about.html">our story</a> or <a href="pages/contact.html">contact us</a> to find our shop in Aliwal North</p>
+
+        </section>
     </main>
+
+    <!--Links including js-->
+    <footer>
+        <nav aria-label = "Footer" >
+            <a href="index.html">HOME</a>
+            <a href="pages/about.html">ABOUT US</a>
+            <a href="pages/contact.html">CONTACT US</a>
+            <a href="pages/enquiry.html">ENQUIRY</a>
+            <a href="pages/services.html">SERVICES</a>
+        </nav>
+        <p class ="share-links">Share this page: <span id ="shareLinks"></span></p>
+        <p>&copy; <span id="year"></span> SLAY_HAIRBEAUTY | 18A CathCart Street, Aliwal North,9750</p>
+
+    </footer>
+
+    
     
 </body>
 </html>
