@@ -34,7 +34,21 @@ https://colorlib.com/wp/hair-salon-websites-design/    [Accessed 20 March 2026]
 https://codelucky.com/web-hosting-requirement   [Accessed 29 August 2025]
 https://www.jwd.co.za/website-technical-guide/  [updated 16 July 2025]
 
+ # Part 3:
+
+ - I fixed html errors.
+ - Added the contact form in the contact page , also included email preview. 
+ -  Added enquiry form in the enquiry page , and included price quote for our clients. 
+ - Added the delivery cost to make it easier for our clients and then them choose which is most suitable for them. 
+ - included java script on all pages 
+ - and also java script main. 
  
+
+
+ 
+
+
+
 
 
 
