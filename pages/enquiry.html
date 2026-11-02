@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=>, initial-scale=1.0">
      <link rel="stylesheet "href="../assets/css/style.css"> 
-    <title>SLAY_HAIRBEAUTY | ENQUIRY</title>
+    <title>Wig Enquiry &amp ; Booking Form | SLAY_HAIRBEAUTY | ENQUIRY</title>
+        <meta name="descriptipn" content="Send an enquiry or book a wig installation and wig wash with SLAY_HAIRBEAUTY. We reply within 24 hours.  ">
+    <meta name="keywords" content="wig enquiry , book wig installtion , wig wash booking, wig proces , Aliwal North.">
+    <meta name="author" content=" Akhokhele Madikwa">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c1285b">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SLAY_HAIRBEAUTY">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title " content="Wig Enquiry and Booking | SLAY_HAIRBEAUTY">
+    <meta property="og:descriptipn" content="Send an enquiry or book a wig installation or wig wash with SLAY_HAIRBEAUTY. We reply within 24 hours.">
 </head>
 <body>
     <!--Header Section-->
@@ -30,51 +40,106 @@
             <p>
                 If you have enquiries regarding our services, products & staff. Fill in the enquiry and trust us our management 
                 we will respond back within 24Hours.
+
+                you can see all prices on our <a href="services.html" >services page </a>, or send a general message on the <a href="contact.html">contact page</a>.
             </p><br>
             <hr/>
         </section>
-    </main>
+   
 
      <!--SLAY_HAIRBEAUTY enquiry form section-->  
     <section>
                <h1>Enquiry Form</h1> 
                <!--Create a form-->
-               <form id action="enquiryForm" method="post"  novalidate>
+               <form id action="enquiryForm" action ="https://jsonplaceholder.typicode.com/posts " method="post"  novalidate>
                 <label for="name">NAME:</label><br/>
-                <input type="text" id="name" placeholder="Tell us who you are" required>
+                <input type="text" id="name" placeholder="Tell us who you are" autocomplete="name"  required minlength="2" maxlength="60">
                 <div class ="error" id="err-name" style ="color:rgb(239, 169, 200)"></div>
                 <br/><br/>
-                <label for="email"name="email">Email Address</label><br/>
-                <input type="email" name="email" placeholder="Where can we reply to you " required>
-                <div class ="error" id="err-name" style ="color:"></div>
+                <label for="email">Email Address</label><br/>
+                <input type="email"  id="email" name="email" placeholder="Where can we reply to you "autocomplete="email" required maxlength="100">
+                <div class ="error" id="err-name" style ="color:rgb(239, 169, 200)"></div>
                 <br/><br/>
                 <label for ="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" placeholder="e.g. 0670210646">
-                <div class ="error" id="err-name" style ="color:rgb(239, 169, 200)"></div>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 0670210646" autocomplete="tel" inputmode="tel" maxlength="16">
+                <div class ="error" id="err-phone" style ="color:rgb(239, 169, 200)"></div>
                 <label for="How can we help you?" name="How can we help you?">Message:</label><br/>
                 <label for ="service">What are you enquiring about?</label>
-                <select id="service" name="service">
+                <select id="service" name="service"  required>
                     <option value ="">--Select an option --</option>
+                    <option value="Wig Sales|1500" >wig sales </option>
                     <option value ="Installations|300"> Installations</option>
                     <option value ="Wig wash & Care|180"> Wig wash & Care </option>
 
 
                 </select>
                 <div class ="error" id="err-services" style="color:rgb(239, 169, 200)"></div><br/>
+                <p id="quote" aria-live="polite"></p>
+                <br/>
+
+                <!--quantity -->
+                <label for ="--quantity">Quantity ( 1 to 5): </label><br/>
+                <input type="number" id="quantity" name="quantity" min="1" max="5" value="1" required inputmode="numeric">
+                <div class="error" id="err-quantity" style="color:rgb(239, 169, 200)" ></div>
+
+            
 
                 <label for ="date" >Preferred date: </label><br/>
                 <input type ="date" id=" date " name="date">
                 <div class ="error" id="err-service" style="color:rgb(239, 169, 200)" ></div><br/>
 
+                 <!--radio buttons-->
+                <fieldset id="contactMethodGroup" >
+                    <legend><input type="radio"  name="contactMethod" value="email">Email</legend>
+                     <legend><input type="radio"  name="contactMethod" value="phone call">Phone call </legend>
+                      <legend><input type="radio"  name="contactMethod" value="WhatsApp">WhatsApp</legend>
+
+                </fieldset>
+
                 <label for ="details ">Message :</label><br/>
                 <textarea name="How can we help you?"rows="10" cols="40" placeholder="Tell us what you want us to improve in our services"> </textarea>
-                 <div class ="error" id="err-services" style="color:rgb(239, 169, 200)"></div><br/>
+                <small id="count-details" class="char-count"></small>
+                 <div class ="error" id="err-details" style="color:rgb(239, 169, 200)"></div><br/>
+                 <label class ="checkbox-label"></label>
+                 <input type="checkbox" id="consent " name="consent" required>
+                    I agree that SLAY_HAIRBEAUTY may contact me about this enquiry.
+            </label>
+            <div class="error" id="err-consent" style="color:rgb(239, 169, 200)"></div>
 
+        
                 <br/><br/>
-                <button type="submit"></button>
+                <button type="submit"  id="submitButton">Send Enquiry</button>
+                <button type="reset" >Clear</button>
                 
               </form>
-              <
+              
+              <!--Response -->
+              <div id="enquiryResult" class="result-box" hidden>
+                <h3> Thank you, your enquiry has been received</h3>
+                <p><strong>Reference:</strong > <span id="resRef"></span></p>
+                <p><strong>Name:</strong> <span id="resName"></span> </p>
+                <p><strong>Service:</strong> <span id="resService" ></span></p>
+                <p><strong>Estimated cost:</strong> <span id="resCost"></span></p>
+                <p><strong>Availability:</strong> <span id="resAvailability"></span>
+                <p id="resContact"></p>
+              </div>
+              <div id="enquiryError"  class="result-box" role="alert" hidden></div>
+
            
         </section>
+        </main>
+
+         <footer>
+        <nav aria-label = "Footer" >
+            <a href="index.html">HOME</a>
+            <a href="pages/about.html">ABOUT US</a>
+            <a href="pages/contact.html">CONTACT US</a>
+            <a href="pages/enquiry.html">ENQUIRY</a>
+            <a href="pages/services.html">SERVICES</a>
+        </nav>
+        <p class ="share-links">Share this page: <span id ="shareLinks"></span></p>
+        <p>&copy; <span id="year"></span> SLAY_HAIRBEAUTY | 18A CathCart Street, Aliwal North,9750</p>
+       
+    </footer>
+
     
