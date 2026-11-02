@@ -71,7 +71,7 @@
             ['WhatsApp', 'https://wa.me/?text=' + text + '%20' + url]
 
         ];
-        targets.forEach(function (target) {
+        targets.forEach(function (target) {             
             const link = document.createElement ('a') ;
             link.href =  target[1];
             link.textContent = target[0];
