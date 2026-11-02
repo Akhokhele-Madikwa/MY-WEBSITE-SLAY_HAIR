@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=>, initial-scale=1.0">
      <link rel="stylesheet" href= "../assets/css/style.css"> 
     <title>SLAY_HAIR |CONTACT US</title>
+       <meta name="descriptipn" content="SLAY_HAIRBEAUTY sells high-quality , affordable wigs for women in Aliwal North, with professional wig installations and wig wash & care">
+    <meta name="keywords" content="wigs,afforable wigs , wig installation and care.">
+    <meta name="author" content=" Akhokhele Madikwa">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#c1285b">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SLAY_HAIRBEAUTY">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title " content="SLAY_HAIRBEAUTY  | Quality Wigs for Women">
+    <meta property="og:descriptipn" content="SLAY_HAIRBEAUTY high-quality , affordable wigs for women in Aliwal North, with professional wig installations and wig wash & care">
+    <!--Added structured data so search -->
+    <script type="application/id+json">
+        {
+                        "@context": :https://schema.org",
+            "@type": "HairSalon",
+            "name": "SLAY_HAIRBEAUTY",
+            "descriptipn": "high-quality , affordable wigs for women in Aliwal North, with professional wig installations and wig wash & care",
+            "telephone":"+27670210646",
+            "email": "info@slay_hairbeauty.com",
+            "areaServed": "Aliwal North, Eastern Cape , South Africa" ,
+            "address" : {
+                "@type" : "PostalAddress",
+                "stressAddress": "18A CathCart Street",
+                "addressLocality": "Aliwal North",
+                "postalCode":"9750",
+                "addressCountry":"ZA",
+            },
+            "geo" :{"@type": "GeoCoordinates" , "latitude":-30.68807, "longitude":26.71039},
+            "openingHoursSpecification" : [
+                {"@type": "openingHoursSpecification" , "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday" , "Friday"] , "opens": "09:00" , "closes": "18:00"},
+                {"@type": "openingHoursSpecification" , "dayOfWeek": ["Saturday", "Sunday"], "opens": "10:00" , "closes": "15:00"}  ]
+        }
+    </script>
+
+        
 </head>
 <body>
     <!--Header Section-->
@@ -55,23 +90,25 @@
                     <option>Booking / Appointment</option>
                     <option>Complaint</option>
                 </select>
-                <div id="err-msgType" style="color:rgb(239, 169, 200)"></div><br/>
+                <div class = "error"  id="err-msgType" style="color:rgb(239, 169, 200)"></div><br/>
                 <label for ="Message">Your Message</label><br>
                 <textarea id="Message" name="Message" rows="8" cols="40" placeholder="Type your message here"></textarea>
-                <div id="err-message" style="color:rgb(239, 169, 200)"></div><br>
+                <small id="count-message" class="char-count"></small>
+                <div class="error"  id="err-message" style="color:rgb(239, 169, 200)"></div><br>
 
                 <button type="submit">Email</button>
+                <button type="reset">Clear</button>
 
                 
             </form>
-            <div id ="preview" style="display:none; margin-top:1rem; padding:1rem; border:2px solid #c2185b"></div>
+            <div id ="preview" class="result-box" style="display:none; margin-top:1rem; padding:1rem; border:2px solid #c2185b" hidden>
             <h3> your email is ready </h3>
             <p><strong>To:</strong><span id="pvTo"></span></p>
             <p><strong>Subject:</strong><span id="pvSubject"></span></p>
             <pre id="pvBody" style="white-space:pre-wrap"></p>
             <a id="sendLink" href="#" >Send Email</a>
              
-            >/div>
+            </div>
             <hr/>
             </section>
             <!--Contact Details-->
@@ -93,9 +130,33 @@
             <li>Address: 18A CathCart Street , Aliwal North,9750</li>
             <li>Map: View on Google Maps</li>
         </ul>
+
+
+        <!--addded intercative map -->
+        <h2>Interactive map</h2>
+        <div id="map" role="region" arria-label="Interactive map showing the SLAY_HAIRBEAUTY shop in Aliwal North"></div>
+        <p><button type ="button"  id="locationBtn">Show my distance to the shop </button></p>
+        <p id="distanceResult" aria-live="polite"></p>
         <!--Google Map -->
-        "<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.078253819074!2d26.710389409891953!3d-30.68807427449992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e891219ea8b5b07%3A0xdfb80f9bcf69452a!2s18A%20Cathcart%20St%2C%20Maletswai%2C%209750!5e0!3m2!1sen!2sza!4v1786688561624!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.078253819074!2d26.710389409891953!3d-30.68807427449992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e891219ea8b5b07%3A0xdfb80f9bcf69452a!2s18A%20Cathcart%20St%2C%20Maletswai%2C%209750!5e0!3m2!1sen!2sza!4v1786688561624!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"></iframe>
         <br/><hr/>
+    </section>
+    </main>
+
+    <!--Added footer -->
+     <footer>
+        <nav aria-label = "Footer" >
+            <a href="index.html">HOME</a>
+            <a href="pages/about.html">ABOUT US</a>
+            <a href="pages/contact.html">CONTACT US</a>
+            <a href="pages/enquiry.html">ENQUIRY</a>
+            <a href="pages/services.html">SERVICES</a>
+        </nav>
+        <p class ="share-links">Share this page: <span id ="shareLinks"></span></p>
+        <p>&copy; <span id="year"></span> SLAY_HAIRBEAUTY | 18A CathCart Street, Aliwal North,9750</p>
+
+    </footer>
+    
    
 
           
